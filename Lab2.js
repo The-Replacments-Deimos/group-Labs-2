@@ -25,7 +25,7 @@ function towerHanoi(discs) {
 //*************************************************************************************
 
 
-
+//Problem 1
 //site https://edabit.com/challenge/y55uFmf4xCdivNBaT
 //problem: Time Elapsed
 //Create a function that takes two timestamps as input, and returns a string describing the time elapsed between them
@@ -98,13 +98,13 @@ function elapsed(time1, time2) {
     return returnString;
 }
 
-console.log(elapsed(1559813526, 1559899926));
-console.log(elapsed(1559681004, 1559899926));
-console.log(elapsed(1558773066, 1559899926));
+// console.log(elapsed(1559813526, 1559899926));
+// console.log(elapsed(1559681004, 1559899926));
+// console.log(elapsed(1558773066, 1559899926));
 
 
 
-
+//Problem 2
 //site:https://edabit.com/challenge/YFkyAh5sm9Guqth85
 //Problem: Knights on a Board
 //Write a function that returns true if the knights are placed on a chessboard such that no knight can capture another
@@ -164,24 +164,34 @@ function cannotCapture(arrayGrid) {
     return noCapture;
 }
 
-console.log(cannotCapture([
-    [0, 0, 0, 1, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 1, 0, 0, 0, 1, 0, 0],
-    [0, 0, 0, 0, 1, 0, 1, 0],
-    [0, 1, 0, 0, 0, 1, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 1, 0, 0, 0, 0, 0, 1],
-    [0, 0, 0, 0, 1, 0, 0, 0]
-]));
+// console.log(cannotCapture([
+//     [0, 0, 0, 1, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 1, 0, 0, 0, 1, 0, 0],
+//     [0, 0, 0, 0, 1, 0, 1, 0],
+//     [0, 1, 0, 0, 0, 1, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 1, 0, 0, 0, 0, 0, 1],
+//     [0, 0, 0, 0, 1, 0, 0, 0]
+// ]));
+//
+// console.log(cannotCapture([
+//     [1, 0, 1, 0, 1, 0, 1, 0],
+//     [0, 1, 0, 1, 0, 1, 0, 1],
+//     [0, 0, 0, 0, 1, 0, 1, 0],
+//     [0, 0, 1, 0, 0, 1, 0, 1],
+//     [1, 0, 0, 0, 1, 0, 1, 0],
+//     [0, 0, 0, 0, 0, 1, 0, 1],
+//     [1, 0, 0, 0, 1, 0, 1, 0],
+//     [0, 0, 0, 1, 0, 1, 0, 1]
+// ]));
 
-console.log(cannotCapture([
-    [1, 0, 1, 0, 1, 0, 1, 0],
-    [0, 1, 0, 1, 0, 1, 0, 1],
-    [0, 0, 0, 0, 1, 0, 1, 0],
-    [0, 0, 1, 0, 0, 1, 0, 1],
-    [1, 0, 0, 0, 1, 0, 1, 0],
-    [0, 0, 0, 0, 0, 1, 0, 1],
-    [1, 0, 0, 0, 1, 0, 1, 0],
-    [0, 0, 0, 1, 0, 1, 0, 1]
-]));
+//Problem 3
+//site: https://edabit.com/challenge/y7xoBP9bgHRNTcELK
+//problem: String Cleaver
+//Create a function that takes a string (without spaces) and a word array, cleaves the string into words based on the
+// array, and returns the correctly spaced version of the string (a sentence). If a section of the string is
+// encountered that can't be found on the word array, return "Cleaving stalled: Word not found".
+
+
+
