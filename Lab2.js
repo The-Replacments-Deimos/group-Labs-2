@@ -1,5 +1,9 @@
 "use strict";
 
+
+
+
+// TOO SHORT NOT COUNTING ************************************************
 //site https://edabit.com/challenge/3ZtykTsx3GSoPHyBb
 //Problem: Tower of Hanoi
 //Create a function that takes a number discs as an argument and returns the minimum amount of steps needed to complete the game.
@@ -17,6 +21,10 @@ function towerHanoi(discs) {
 // console.log(towerHanoi("tower"));
 // console.log(towerHanoi(3));
 // console.log(towerHanoi(5));
+
+//*************************************************************************************
+
+
 
 //site https://edabit.com/challenge/y55uFmf4xCdivNBaT
 //problem: Time Elapsed
@@ -93,6 +101,9 @@ function elapsed(time1, time2) {
 console.log(elapsed(1559813526, 1559899926));
 console.log(elapsed(1559681004, 1559899926));
 console.log(elapsed(1558773066, 1559899926));
+
+
+
 
 //site:https://edabit.com/challenge/YFkyAh5sm9Guqth85
 //Problem: Knights on a Board
