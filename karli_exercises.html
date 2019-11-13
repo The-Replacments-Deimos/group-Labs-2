@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Karli's Exercises</title>
+
+</head>
+<body>
+
+
+
+<script>
+    ////Exercise 1:
+    //Write a function testNum that takes a number as an argument and returns a Promise that tests if the value is less than or greater than the value 10.
+
+    const compareToTen = (num) => {
+        p = new Promise((resolve, reject) => {
+            if(num > 10) {
+                resolve(num + " is greater than 10, success!")
+            } else {
+                reject(num + " is less than 10, error!")
+            }
+        })
+        return p
+    }
+
+    compareToTen(15)
+        .then(result => console.log(result))
+        .catch(error => console.log(error))
+
+    compareToTen(8)
+        .then(result => console.log(result))
+        .catch(error => console.log(error))
+
+
+</script>
+</body>
+</html>
