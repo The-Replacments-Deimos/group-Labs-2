@@ -195,3 +195,146 @@ function cannotCapture(arrayGrid) {
 
 
 
+
+
+
+
+//*********************************************************************************
+//Map filter reduce extra problems
+//site: https://java.codeup.com/extra-exercises/javascript/map-filter-reduce/
+const fruits = ["cantaloupe", "orange", "date", "elderberry", "ugli fruit", "pineapple"];
+
+const customers = [
+    {
+        name: "Fred",
+        age: 58,
+        occupation: "Police Officer",
+        noOfPurchases: 4
+    },
+    {
+        name: "Samantha",
+        age: 54,
+        occupation: "Teacher",
+        noOfPurchases: 18
+    },
+    {
+        name: "Charles",
+        age: 38,
+        occupation: "Librarian",
+        noOfPurchases: 9
+    }
+];
+
+const pets = [
+    {
+        name: 'Bud',
+        age: 2,
+        breed: 'Pug'
+    },
+    {
+        name: 'Gabby',
+        age: 10,
+        breed: 'Retriever'
+    },
+    {
+        name: 'Fred',
+        age: 1,
+        breed: 'Lab'
+    },
+    {
+        name: 'Bowser',
+        age: 2,
+        breed: 'Pug'
+    }
+];
+
+const family = [
+    {
+        name: "Pam",
+        gender: "female",
+        age: 29,
+    },
+    {
+        name: "Amelie",
+        gender: "female",
+        age: 10,
+    },
+    {
+        name: "Justin",
+        gender: "male",
+        age: 32,
+    },
+];
+
+
+//Create an array of the first letters of each fruit
+
+let firstLetterFruits =[];
+fruits.map(fruit => firstLetterFruits.push(fruit[0]));
+
+console.log(firstLetterFruits);
+
+//Create array of user objects based on the customers array of objects (each user object should just have name
+// and age properties)
+
+let userArray = [];
+
+customers.map(customer => userArray.push({name:customer.name,age:customer.age}));
+
+console.log(userArray);
+
+//Create an array of civil servant customers (teachers and police officers) containing the same properties as
+// the objects on the customers objects
+
+let civilServants = customers.filter(customer => customer.occupation === 'Teacher' || customer.occupation === 'Police Officer');
+
+console.log(civilServants);
+
+//Determine the average age of all the customers
+let totalAge = customers.reduce((total,customer)=>{
+    return total += customer.age;
+},0);
+
+let avgAge = totalAge/customers.length;
+console.log(avgAge);
+
+//Create a function makeSuperPet() that takes in the pets array as input and returns a single pet object
+// with the following shape...
+//{
+//     name: ALL_PET_NAMES_CONCATENATED_INTO_A_SINGLE_STRING,
+//     age: THE_TOTAL_OF_ALL_PET_AGES,
+//     breed: THE_FIRST_LETTERS_OF_ALL_PET_BREEDS_CONCATENATATED_INTO_A_SINGLE_STRING
+// }
+
+const makeSuperPet = () =>{
+  return {
+      name: pets.reduce((petString, pet) => petString += pet.name,""),
+      age: pets.reduce((petAge, pet) => petAge += pet.age,0),
+      breed: pets.reduce((breedLetters,pet)=> breedLetters += pet.breed[0],"")
+  };
+};
+
+console.log(makeSuperPet());
+
+//Create a function that takes in an array of pets and returns an array of the length of first names for pugs only.
+// Your output for the given input should be [3, 6] for 'Bud' and 'Bowser'
+
+const pugNameLength = (petObj) => {
+    let pugPets = petObj.filter(pet => pet.breed === 'Pug');
+    let returnArray = [];
+    pugPets.map(pet=> returnArray.push(pet.name.length));
+    return returnArray;
+};
+
+console.log(pugNameLength(pets));
+
+//Create a function getFemaleFamilyMembers() that when given the family variable as an argument, returns an array
+// of female family member names
+function getFemaleFamilyMembers(familyObj) {
+    let femaleArray = familyObj.filter(member => member.gender === 'female');
+    let returnArray = [];
+    femaleArray.map(member => returnArray.push(member.name));
+    return returnArray;
+}
+
+console.log(getFemaleFamilyMembers(family));
