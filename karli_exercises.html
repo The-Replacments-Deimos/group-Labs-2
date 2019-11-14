@@ -14,7 +14,7 @@
     //Write a function testNum that takes a number as an argument and returns a Promise that tests if the value is less than or greater than the value 10.
 
     const compareToTen = (num) => {
-        p = new Promise((resolve, reject) => {
+        p = new Promise((resolve, reject) => {git
             if(num > 10) {
                 resolve(num + " is greater than 10, success!")
             } else {
@@ -33,6 +33,18 @@
         .catch(error => console.log(error))
 
 
+    //Create a function that takes a string as an argument and converts the first character of each word to uppercase. Return the newly formatted string.
+
+
+    const capitalize = (str) => {
+        return str
+            .toLowerCase()
+            .split(' ')
+            .map(strWord => strWord.substring(0, 1).toUpperCase() + strWord.substring(1, strWord.length))
+            .join(' ')
+    }
+
+    console.log(capitalize("sally is a toot"))
 </script>
 </body>
 </html>
