@@ -17,10 +17,10 @@ function towerHanoi(discs) {
     }
 }
 
-// console.log(towerHanoi(0));
-// console.log(towerHanoi("tower"));
-// console.log(towerHanoi(3));
-// console.log(towerHanoi(5));
+console.log(towerHanoi(0));
+console.log(towerHanoi("tower"));
+console.log(towerHanoi(3));
+console.log(towerHanoi(5));
 
 //*************************************************************************************
 
@@ -98,9 +98,9 @@ function elapsed(time1, time2) {
     return returnString;
 }
 
-// console.log(elapsed(1559813526, 1559899926));
-// console.log(elapsed(1559681004, 1559899926));
-// console.log(elapsed(1558773066, 1559899926));
+console.log(elapsed(1559813526, 1559899926));
+console.log(elapsed(1559681004, 1559899926));
+console.log(elapsed(1558773066, 1559899926));
 
 
 
@@ -164,27 +164,27 @@ function cannotCapture(arrayGrid) {
     return noCapture;
 }
 
-// console.log(cannotCapture([
-//     [0, 0, 0, 1, 0, 0, 0, 0],
-//     [0, 0, 0, 0, 0, 0, 0, 0],
-//     [0, 1, 0, 0, 0, 1, 0, 0],
-//     [0, 0, 0, 0, 1, 0, 1, 0],
-//     [0, 1, 0, 0, 0, 1, 0, 0],
-//     [0, 0, 0, 0, 0, 0, 0, 0],
-//     [0, 1, 0, 0, 0, 0, 0, 1],
-//     [0, 0, 0, 0, 1, 0, 0, 0]
-// ]));
+console.log(cannotCapture([
+    [0, 0, 0, 1, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 1, 0, 1, 0],
+    [0, 1, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 1, 0, 0, 0]
+]));
 //
-// console.log(cannotCapture([
-//     [1, 0, 1, 0, 1, 0, 1, 0],
-//     [0, 1, 0, 1, 0, 1, 0, 1],
-//     [0, 0, 0, 0, 1, 0, 1, 0],
-//     [0, 0, 1, 0, 0, 1, 0, 1],
-//     [1, 0, 0, 0, 1, 0, 1, 0],
-//     [0, 0, 0, 0, 0, 1, 0, 1],
-//     [1, 0, 0, 0, 1, 0, 1, 0],
-//     [0, 0, 0, 1, 0, 1, 0, 1]
-// ]));
+console.log(cannotCapture([
+    [1, 0, 1, 0, 1, 0, 1, 0],
+    [0, 1, 0, 1, 0, 1, 0, 1],
+    [0, 0, 0, 0, 1, 0, 1, 0],
+    [0, 0, 1, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1, 0, 1, 0],
+    [0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 1, 0, 1, 0],
+    [0, 0, 0, 1, 0, 1, 0, 1]
+]));
 
 //Problem 3
 //site: https://edabit.com/challenge/y7xoBP9bgHRNTcELK
@@ -338,3 +338,14 @@ function getFemaleFamilyMembers(familyObj) {
 }
 
 console.log(getFemaleFamilyMembers(family));
+
+//Create a function makeLongPetString() that when given the variable of pets, returns a string of all 
+// property values with dashes separating each property value
+
+function makeLongPetString(petObj) {
+    let returnArray = [];
+    return
+}
+
+
+
