@@ -44,7 +44,59 @@
             .join(' ')
     }
 
-    console.log(capitalize("sally is a toot"))
+    console.log(capitalize("sally is a toot"));
+
+
+    //Second Week
+
+
+   // Create a function that determines if there is an upward trend.
+
+    function upwardTrend(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (typeof arr[i] === "string") return "Strings not permitted!";
+            if (arr[i+1] < arr[i]) return false;
+        }
+        return true;
+    }
+
+    console.log(upwardTrend([1, 2, 1, 4]));
+
+
+
+
+    //create a function that finds the number of 1s in an array
+
+    function countOnes(arr) {
+        return arr.toString().split(',').filter(x => x =='1').length;
+    }
+
+    console.log(countOnes([1, 1, 3]));
+//Create a function that takes an array of strings and return the number of smiley faces contained within it. These are the components that make up a valid smiley:
+
+   // A smiley has eyes. Eyes can be : or ;.
+  //  A smiley has a nose but it doesn't have to. A nose can be - or ~.
+  //  A smiley has a mouth which can be ) or D.
+  //   No other characters are allowed except for those mentioned above.
+
+    function countSmileys(arr) {
+        let count = 0;
+        let regex = /[:;][-~]?[)D]/;
+        if(arr.length === 0) {
+            return 0;
+        } else {
+            arr.forEach(el => {
+                if (regex.test(el) === true) {
+                    count++;
+                }
+            });
+            return count;
+        }
+    }
+
+    console.log(countSmileys( [":)"] ));
+
+
 </script>
 </body>
 </html>
