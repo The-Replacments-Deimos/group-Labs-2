@@ -531,3 +531,74 @@ function sentencePrimeness(sentence) {
 //Write a function that connects each previous word to the next word by the shared letters. Return the resulting
 // string (removing duplicate characters in the overlap) and the minimum number of shared letters across all
 // pairs of strings.
+
+function join(array) {
+    let returnString = array[0];
+    let returnMin = -1;
+    let canCombine = false;
+    for (let i = 0; i < array.length; i++){
+        if (i+1 !== array.length){
+            for (let j = 0; j < array[i].length; j++){
+                if (array[i][j] === array[i+1][0]){
+                    let remainingLetters = array[i].slice(j);
+                    let startOFNextLetters = array[i+1].slice(0,remainingLetters.length);
+                    if (remainingLetters === startOFNextLetters){
+                        returnString += array[i+1].slice(remainingLetters.length);
+                        canCombine = true;
+                        if (returnMin === -1 || returnMin < remainingLetters.length){
+                            returnMin = remainingLetters.length;
+                        }
+                    }
+                }
+            }
+            if (canCombine === false){
+                returnString += array[i+1];
+                returnMin = 0;
+            }
+        }
+        canCombine = false;
+    }
+
+    return [returnString,returnMin];
+}
+
+console.log(join(["oven", "envier", "erase", "serious"]));
+console.log(join(["move", "over", "very"]));
+console.log(join(["to", "ops", "psy", "syllable"]));
+console.log(join(["aaa", "bbb", "ccc", "ddd"]));
+
+//Problem 4 (extra)
+//site: https://edabit.com/challenge/9MEWMJ5eX8EAiWSs5
+//Problem: Unique Character Mapping
+//Write a function that returns a character mapping from a word.
+
+function characterMapping(str){
+    let uniqueArray = [];
+    let hasMatch = false;
+    let returnArray = [];
+    let uniqueIndex = -1;
+    // console.log(uniqueArray);
+    for (let i=0;i <str.length;i++){
+        for (let j = 0; j < uniqueArray.length; j++) {
+            if (str[i] === uniqueArray[j]) {
+                // returnArray.push(uniqueArray.indexOf(uniqueArray[j]));
+                uniqueIndex = uniqueArray.indexOf(uniqueArray[j]);
+                hasMatch = true;
+            }
+        }
+        if (hasMatch === false) {
+            uniqueArray.push(str[i]);
+            uniqueIndex = uniqueArray.indexOf(str[i]);
+        }
+        returnArray.push(uniqueIndex);
+        hasMatch = false;
+    }
+
+    return returnArray;
+
+}
+
+console.log(characterMapping("abcd"));
+console.log(characterMapping("abb"));
+console.log(characterMapping("babbcb"));
+console.log(characterMapping("hmmmmm"));
